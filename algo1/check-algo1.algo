@@ -1,0 +1,27 @@
+// sentence : Hello from Tunisia ( 3 words, 7 vowels,  18 char)
+ALGORITHM Checkpoint_algo1
+VAR
+    c:CHAR:="";
+   
+    nbr_vowel= INTEGER :=0;
+    nbr_words = INTEGER := 1;
+    nbr_char = INTEGER := 0;
+
+BEGIN
+    // count the length of the sentence
+    WHILE (c<>.) DO
+    read ("give c")
+    nbr_char  = nbr_char + 1;
+    IF ( c= "") THEN
+    nbr_words :=nbr_words +1;
+    END_IF
+    IF c = "a" or c= "i" or c ="u" or c = "y" or c = "o") THEN
+        nbr_vowel = nbr_vowel + 1
+    END_IF
+    
+    END_WHILE
+    write ( " number of vowels is", nbr_vowel);
+    write ( "number of character is", nbr_char);
+    write ("number of words is", nbr_words)
+    
+END
