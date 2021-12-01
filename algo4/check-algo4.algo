@@ -1,0 +1,35 @@
+
+PROCEDURE  insetion_sort(arr : Array_OF INTEGER, n)
+VAR
+    i,j,n, tmp : INTEGER
+BEGIN
+    n := arr.length
+    // we take a card and put this card in a temperorary variable
+    tmp = arr [i]
+    // compare tmp w tith the number before
+   j = i-1
+    // while tmp > arr [i -1];  arr [i] = arr[i-1]
+    while ( j >=0 && arr [j]> tmp)
+    {
+        arr [j +1] = arr [j]
+        j = j-1
+    }
+     arr [ j + 1 ] = tmp
+END
+ALGORITHM InsertionSort
+VAR
+    n,i:INTEGER;
+    V1:ARRAY_OF INTEGER[n];
+BEGIN
+    //Read the array
+    Write("Give the length of the array") ; Read(n);
+    Write("Give the elements of the array") 
+    FOR i FROM 0 TO n-1 DO
+       Read(V1[i]);
+    END_FOR
+    Write("the original unsorted array",V1) ; 
+    //Sort the array
+    insertion_sort(V1,n);
+    //Display the sorted array
+    Write("the final sorted array",V1) ; 
+END

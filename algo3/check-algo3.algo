@@ -1,0 +1,72 @@
+
+// the algorithm for function:
+FUNCTION DOT_product_Function(V1,V2: ARRAY_OF INTEGER[3]) :FLOAT
+VAR
+    PS : FLOAT := 0 //contain dot product
+BEGIN
+FOR i FROM 0 TO v1.length -1 STEP 2 DO
+    FOR j FROM 0 TO v2.length -1 STEP 2 DO
+
+        IF (i = j) THEN
+            PS= PS + (V1[i] * V2[j])
+        END_IF
+    END_FOR
+END_FOR
+    Return PS
+END
+
+ALGORITHM DOT_product_Algo
+VAR 
+    V1,V2 : ARRAY_OF INTEGER[3];
+    i,j : INTEGER;
+    x : INTEGER
+BEGIN
+    Write("Enter the first vector "); Read(V1);
+    Write("Enter the second setvector"); Read(V2);
+    FOR i FROM 0 TO V1.length-1 STEP 2  DO
+        FOR j FROM 0 TO V2.length-1 STEP 2  DO
+           
+           x = DOT_product(V1,V2)
+           IF (x = 0) THEN 
+           Write("V1 and V2 are orthogonal")
+           ELSE 
+           Write("V1 and V2 aren't orthogonal ")
+           END_IF
+        END_FOR
+    END_FOR
+END
+/*****************
+// the algorithm for procedure*/
+PROCEDURE DOT_product_Procedure (V1: ARRAY_OF INTEGER[3], V2 : ARRAY_OF INTEGER[3], PS: FLOAT)
+VAR
+       i,j : INTEGER;
+BEGIN
+FOR i FROM 0 TO v1.length -1 STEP 2 DO
+    FOR j FROM 0 TO v2.length -1 STEP 2 DO
+
+        IF (i = j) THEN
+            PS= PS + (V1[i] * V2[j])
+        END_IF
+    END_FOR
+END_FOR
+END
+ALGORITHM DOT_product_Algo
+VAR 
+    V1,V2 : ARRAY_OF INTEGER[3];
+    i,j : INTEGER;
+    x : INTEGER
+BEGIN
+    Write("Enter the first vector "); Read(V1);
+    Write("Enter the second setvector"); Read(V2);
+    FOR i FROM 0 TO V1.length-1 STEP 2  DO
+        FOR j FROM 0 TO V2.length-1 STEP 2  DO
+           
+           x = DOT_product(V1,V2)
+           IF (x = 0) THEN 
+           Write("V1 and V2 are orthogonal")
+           ELSE 
+           Write("V1 and V2 aren't orthogonal ")
+           END_IF
+        END_FOR
+    END_FOR
+END

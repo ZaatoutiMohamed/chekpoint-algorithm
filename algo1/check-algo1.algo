@@ -5,7 +5,17 @@ VAR
    
     nbr_vowel= INTEGER :=0;
     nbr_words = INTEGER := 1;
-    nbr_char = INTEGER := 0;
+    nbr_char = INTEGER := 0;+
+    8655555555555
+    0122222222222222222222222222222+*8
+
+
+
+
+
+
+
+    
 
 BEGIN
     // count the length of the sentence
